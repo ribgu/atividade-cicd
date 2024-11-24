@@ -1,6 +1,6 @@
 name: Deploy to EC2
 
-
+# Executa o workflow quando há push na branch "main"
 on:
   push:
     branches:
