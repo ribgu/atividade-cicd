@@ -20,10 +20,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean install -Dfile.encoding=UTF-8 -X
 
       - name: Run tests
-        run: mvn test
+        run: mvn test -Dfile.encoding=UTF-8
 
   build-and-publish-docker:
     needs: build-and-test
