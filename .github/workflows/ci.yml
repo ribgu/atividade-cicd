@@ -7,6 +7,10 @@ on:
       - develop
     types: [opened, reopened]
 
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -57,8 +61,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push
+      - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: guugs/atividade:latest
+          tags: guugs/atv:latest
