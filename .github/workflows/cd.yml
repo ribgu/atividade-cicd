@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pull Docker image
-        run: docker pull guugs/forum-kt:latest
+        run: docker pull guugs/atividade:latest
 
       - name: Stop Docker container
         run: docker stop ci || true

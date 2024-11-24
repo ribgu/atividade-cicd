@@ -61,4 +61,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: guugs/atv:latest
+          tags: guugs/atividade:latest
